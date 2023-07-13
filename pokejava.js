@@ -3,8 +3,9 @@ const pokelista=document.getElementById("pokelist")
 let nome=document.querySelector("#nome")
 let elemento=document.querySelector("#elemento")
 let pic=document.getElementById("pic")
+let lower = pokelista.value.toLowerCase()
 document.querySelector("#botao").onclick=()=>{
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokelista.value}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${lower}`)
     .then(
         function(res){
             return res.json()
